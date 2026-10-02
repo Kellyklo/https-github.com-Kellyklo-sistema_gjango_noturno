@@ -7,6 +7,5 @@ from django.shortcuts import render
 def index(request):
     return render(request, "index.html")
 
-novo-paciente
-def novo-paciente(request):
+def novo_paciente(request):
     return render(request, "novo-paciente.html")
