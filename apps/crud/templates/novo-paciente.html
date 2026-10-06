@@ -6,15 +6,15 @@
     Cadastrar Novo Paciente
 </h1>
 <hr>
-{% if error %}<p>{{error}}</p>{% endif%}
+{% if error %}<p>{{ error }}</p>{% endif %}
 <form action="" method="POST">
     {% csrf_token %}
     <div class="row">
         <div class="col-12 com-md-8 col-lg-6 mb-3">
-            <label for="paciente" class="form-label">
+            <label for="nome" class="form-label">
                 Nome do Paciente:
             </label>
-            <input type="text" class="form-control" name=name " "id.name"required>
+            <input type="text" class="form-control" id="nome" name="nome" required>
         </div>
     </div>
     <div class="row">
@@ -22,7 +22,7 @@
             <label for="cpf" class="form-label">
                 Cpf:
             </label>
-            <input type="cpf" class="form-control" name="cpf" required>
+            <input type="text" class="form-control" name="cpf" required>
         </div>
     </div>
 

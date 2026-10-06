@@ -10,6 +10,5 @@ class Paciente(models.Model):
     telefone = models.CharField(max_length=15, null=False, blank=False)
     data_nascimento = models.DateField(null=False, blank=False)
 
-
     def __str__(self):
         return self.nome 
