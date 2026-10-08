@@ -44,3 +44,17 @@ def alterar_paciente(request,codigo_paciente):
 
         return redirect('index')
     return render(request, "alterar_dados.html", {'paciente':paciente})
+
+@login_required
+def excluir_paciente(request, codigo_paciente):
+    paciente = Paciente.objects.get(codigo_paciente=codigo_paciente)
+    return redirect("index")
+
+
+def buscar_paciente(request):
+    query = request.GET.get('buscar','')
+    paciente = Paciente.objects.filter(nome__icontains=query)
+    return render(request, 'index.html', {
+        'pacientes':paciente,
+        'query':query
+    })
