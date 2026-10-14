@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
 class Paciente(models.Model):
     codigo_paciente = models.AutoField(primary_key=True)
     nome = models.CharField(null=False, blank=False)
@@ -9,7 +8,7 @@ class Paciente(models.Model):
     email = models.EmailField(unique=True, null=False, blank=False)
     telefone = models.CharField(max_length=15, null=False, blank=False)
     data_nascimento = models.DateField(null=False, blank=False)
-    sintomas = models .TextField(null=True, blank=True)
+    sintomas = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.nome 
+        return self.nome

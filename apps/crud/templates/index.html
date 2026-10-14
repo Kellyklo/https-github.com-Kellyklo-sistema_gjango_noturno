@@ -1,9 +1,10 @@
 {% extends 'base-crud.html' %}
-{% block title %}CRUD | Home Page{% endblock %}{% block content %}
+{% block title %}CRUD | Home Page{% endblock %}
+{% block content %}
     <div class="row mt-5">
         <h1>Olá, {{ user.username }}, seja bem-vindo!</h1>
     </div>
-    </hr>
+    <hr>
     <div class="row mt-5">
         <h2>Lista de pacientes</h2>
         <ul>
@@ -15,8 +16,7 @@
                     {{ paciente.email }} |
                     {{ paciente.telefone }} |
                     {{ paciente.data_nascimento|date:"d/m/Y" }} |
-                    <a href="{% url 'alterar_paciente' paciente.codigo_paciente %}">Alterar
-                    </a> |
+                    <a href="{% url 'alterar_paciente' paciente.codigo_paciente %}">Alterar</a> |
                     <a href="{% url 'excluir_paciente' paciente.codigo_paciente %}">Excluir</a>
                     <ul>
                         <li>
@@ -25,7 +25,7 @@
                     </ul>
                 </li>
             {% empty %}
-                <li>Nenhum paciente cadastrada.</li>
+                <li>Nenhum paciente cadastrado.</li>
             {% endfor %}
         </ul>
     </div>

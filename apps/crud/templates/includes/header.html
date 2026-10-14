@@ -13,10 +13,10 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="novoPaciente/">cadastrar novo paciente</a>
+                        <a class="nav-link" href="novoPaciente/">Cadastrar novo paciente</a>
                     </li>
                 </ul>
-                <form acction="{% url 'buscar_paciente' %}" class="d-flex" role="search">
+                <form action="{% url 'buscar_paciente' %}" method="GET"  class="d-flex" role="search">
                     <input class="form-control me-2" type="search" name="buscar" placeholder="Pesquisar" aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
